@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{56960FEA-197A-42B4-81B8-04A974B5E2AA}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="ContactApplication/MainActivity.cs" Line="34" Column="15" />
+      <File FileName="ContactApplication/Database.cs" Line="31" Column="16" />
+      <File FileName="ContactApplication/AddContact.cs" Line="14" Column="21" />
+      <File FileName="ContactApplication/Resources/menu/menu_main.xml" Line="1" Column="1" />
+      <File FileName="ContactApplication/Properties/AndroidManifest.xml" />
+      <File FileName="ContactApplication/Properties/AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="ContactApplication/SampleLayout.cs" Line="27" Column="13" />
+      <File FileName="ContactApplication/AddNewContact.cs" Line="42" Column="79" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ContactApplication" expanded="True">
+            <Node name="ContactApplication" expanded="True">
+              <Node name="Assets" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="layout" expanded="True">
+                  <Node name="addNewContact.axml" selected="True" />
+                </Node>
+                <Node name="menu" expanded="True" />
+                <Node name="mipmap-anydpi-v26" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.ContactApplication AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 5X" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

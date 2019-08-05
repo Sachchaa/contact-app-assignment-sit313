@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:minWidth="300dp"
+        android:minHeight="400dp">
+    
+    <EditText
+        android:id="@+id/firstNameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"       
+        android:text=""
+        android:hint="First Name" />
+    <EditText
+        android:id="@+id/lastNameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:hint="Last Name" />
+    <EditText
+        android:id="@+id/mobileNumberText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:hint="Mobile Number" />
+    <EditText
+        android:id="@+id/homeNumberText"
+        android:layout_width="match_parent"
+        android:layout_height="49.5dp"
+        android:text=""
+        android:hint="Home Number" />
+    <EditText
+        android:id="@+id/addressText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:hint="Address" />
+    <EditText
+        android:id="@+id/emailText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:hint="Email" />
+    <Button
+        android:id="@+id/saveContactButton"
+        android:text="Done"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" />
+    
+    <Button
+        android:id="@+id/cancelAddViewButton"
+        android:text="Cancel"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" />
+    
+    
+    
+</LinearLayout>

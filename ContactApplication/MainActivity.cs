@@ -8,44 +8,58 @@ using Android.Views;
 using Android.Widget;
 using System.Collections.Generic;
 using Android.Content;
+using Android.Content.Res;
 
 namespace ContactApplication
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity
+    public class MainActivity : AppCompatActivity 
     {
         /* Create List to add contacts */
 
         private List<Person> contactList;
         private ListView contactListView;
-
+        private Button btnAddContact;      
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            SetContentView(Resource.Layout.activity_main);
+            SetContentView(Resource.Layout.content_main);
+
 
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
-            FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
-            fab.Click += FabOnClick;
 
             contactList = new List<Person>();
 
             contactList.Add(new Person() { FirstName = "Sachin", LastName = "Kanishka", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
             contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
-            /*
-             Create the list view adapter 
-             */
+            contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
+            contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
+            contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
+            contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
+            contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
+            contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
+            contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
 
-            SetContentView(Resource.Layout.content_main);
+           
+            // Create the list view adapter 
+
             ListViewAdapter adapter = new ListViewAdapter(this, contactList);
             contactListView = FindViewById<ListView>(Resource.Id.contactList);
+            btnAddContact = FindViewById<Button>(Resource.Id.addContactButton);
+
+            contactListView.Adapter = adapter;
 
             
-            contactListView.Adapter = adapter;
+            btnAddContact.Click += delegate
+            {
+                Intent intentAdd = new Intent(this, typeof(AddNewContact));
+                StartActivity(intentAdd);
+            };
+
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -77,6 +91,8 @@ namespace ContactApplication
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
+        
     }
 }
 

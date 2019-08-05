@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sachinkanishka/Desktop/ContactApp/ContactApp/ContactApplication/ContactApplication.csproj": {}
+    "/Users/sachinkanishka/Desktop/ContactAppNew/ContactApp/ContactApplication/ContactApplication.csproj": {}
   },
   "projects": {
-    "/Users/sachinkanishka/Desktop/ContactApp/ContactApp/ContactApplication/ContactApplication.csproj": {
+    "/Users/sachinkanishka/Desktop/ContactAppNew/ContactApp/ContactApplication/ContactApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sachinkanishka/Desktop/ContactApp/ContactApp/ContactApplication/ContactApplication.csproj",
+        "projectUniqueName": "/Users/sachinkanishka/Desktop/ContactAppNew/ContactApp/ContactApplication/ContactApplication.csproj",
         "projectName": "ContactApplication",
-        "projectPath": "/Users/sachinkanishka/Desktop/ContactApp/ContactApp/ContactApplication/ContactApplication.csproj",
+        "projectPath": "/Users/sachinkanishka/Desktop/ContactAppNew/ContactApp/ContactApplication/ContactApplication.csproj",
         "packagesPath": "/Users/sachinkanishka/.nuget/packages/",
-        "outputPath": "/Users/sachinkanishka/Desktop/ContactApp/ContactApp/ContactApplication/obj/",
+        "outputPath": "/Users/sachinkanishka/Desktop/ContactAppNew/ContactApp/ContactApplication/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -47,6 +47,10 @@
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.1.0, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.5.231, )"
             }
           }
         }
