@@ -25,6 +25,7 @@ LinearLayout;obj/Debug/res/layout/addnewcontact.xml
 LinearLayout;obj/Debug/res/layout/content_main.xml
 LinearLayout;obj/Debug/res/layout/listview.xml
 LinearLayout;obj/Debug/res/layout/samplelayout.xml
+LinearLayout;obj/Debug/res/layout/viewcontactdeatils.xml
 ListView;obj/Debug/res/layout/content_main.xml
 menu;obj/Debug/res/menu/menu_main.xml
 paths;/Users/sachinkanishka/Desktop/ContactAppNew/ContactApp/ContactApplication/obj/Debug/lp/42/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml

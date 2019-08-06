@@ -17,12 +17,13 @@ namespace ContactApplication
     public class ListViewAdapter: BaseAdapter<Person>
     {
         public List<Person> contactItems;
-        private Context contactContext;
+        private Activity activity;
+        Database db;
 
-        public ListViewAdapter(Context context, List<Person> items)
+        public ListViewAdapter(Activity activity, List<Person> contactItems)
         {
-            contactContext = context;
-            contactItems = items;
+            this.activity = activity;
+            this.contactItems = contactItems;
         }
 
         public override Person this[int position]
@@ -42,15 +43,13 @@ namespace ContactApplication
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
-            View contactRow = convertView;
-            if (contactRow == null)
-            {
-                contactRow = LayoutInflater.From(contactContext).Inflate(Resource.Layout.listView, null, false);
-            }
+
+            var contactRow = convertView??activity.LayoutInflater.Inflate(Resource.Layout.listView, parent, false);
+
             TextView txtName = contactRow.FindViewById<TextView>(Resource.Id.txtContact);
+
+           // contactItems = db.selectTablePerson();
             txtName.Text = contactItems[position].FirstName + " " + contactItems[position].LastName; 
-
-
 
             return contactRow;
         }

@@ -9,6 +9,7 @@ using Android.Widget;
 using System.Collections.Generic;
 using Android.Content;
 using Android.Content.Res;
+using Android.Util;
 
 namespace ContactApplication
 {
@@ -17,9 +18,10 @@ namespace ContactApplication
     {
         /* Create List to add contacts */
 
-        private List<Person> contactList;
+        private List<Person> contactList = new List<Person>();
         private ListView contactListView;
-        private Button btnAddContact;      
+        private Button btnAddContact;
+        Database db; 
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -27,40 +29,46 @@ namespace ContactApplication
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.content_main);
 
+            db = new Database();
+            db.createDatabase();
+
+            string folder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            Log.Info("DB_PATH", folder);
+
 
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
 
-            contactList = new List<Person>();
+            /*
+                        contactList.Add(new Person() { FirstName = "Sachin", LastName = "Kanishka", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
+                        contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
+                        contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
+                        contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
+                        contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
+                        contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
+                        contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
+                        contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
+                        contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
 
-            contactList.Add(new Person() { FirstName = "Sachin", LastName = "Kanishka", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
-            contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
-            contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
-            contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
-            contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
-            contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
-            contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
-            contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
-            contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
+               */
 
-           
-            // Create the list view adapter 
+            // Create the list view adapter
 
-            ListViewAdapter adapter = new ListViewAdapter(this, contactList);
             contactListView = FindViewById<ListView>(Resource.Id.contactList);
             btnAddContact = FindViewById<Button>(Resource.Id.addContactButton);
 
-            contactListView.Adapter = adapter;
-
-            
             btnAddContact.Click += delegate
             {
                 Intent intentAdd = new Intent(this, typeof(AddNewContact));
                 StartActivity(intentAdd);
             };
 
+            LoadData();
+
         }
+
+        
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
@@ -92,6 +100,13 @@ namespace ContactApplication
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
+        private void LoadData()
+        {
+            contactList = db.selectTablePerson();
+            var adapter = new ListViewAdapter(this, contactList);
+            contactListView.Adapter = adapter;
+
+        }
         
     }
 }
