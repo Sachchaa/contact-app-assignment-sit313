@@ -4590,7 +4590,7 @@ containing a value of this type.
         public static int action_mode_bar=0x7f0a008a;
         public static int action_mode_bar_stub=0x7f0a0089;
         public static int action_mode_close_button=0x7f0a006b;
-        public static int action_settings=0x7f0a00cc;
+        public static int action_settings=0x7f0a00d5;
         public static int action_text=0x7f0a00bd;
         public static int actions=0x7f0a00c7;
         public static int activity_chooser_view_content=0x7f0a006c;
@@ -4612,6 +4612,7 @@ containing a value of this type.
         public static int browser_actions_menu_view=0x7f0a00a7;
         public static int buttonPanel=0x7f0a0072;
         public static int cancelAddViewButton=0x7f0a00a6;
+        public static int cancelEditViewButton=0x7f0a00d2;
         public static int center=0x7f0a004c;
         public static int center_horizontal=0x7f0a0051;
         public static int center_vertical=0x7f0a0052;
@@ -4629,12 +4630,20 @@ containing a value of this type.
         public static int customPanel=0x7f0a007b;
         public static int decor_content_parent=0x7f0a008b;
         public static int default_activity_button=0x7f0a006f;
+        public static int deleteContactButton=0x7f0a00d1;
         public static int design_bottom_sheet=0x7f0a00b3;
         public static int design_menu_item_action_area=0x7f0a00b8;
         public static int design_menu_item_action_area_stub=0x7f0a00b7;
         public static int design_menu_item_text=0x7f0a00b6;
         public static int design_navigation_view=0x7f0a00b5;
         public static int disableHome=0x7f0a0027;
+        public static int editAddressText=0x7f0a00ce;
+        public static int editContactButton=0x7f0a00d0;
+        public static int editEmailText=0x7f0a00cf;
+        public static int editFirstNameText=0x7f0a00ca;
+        public static int editHomeNumberText=0x7f0a00cd;
+        public static int editLastNameText=0x7f0a00cb;
+        public static int editMobileNumberText=0x7f0a00cc;
         public static int edit_query=0x7f0a008f;
         public static int emailText=0x7f0a00a4;
         public static int end=0x7f0a0037;
@@ -4671,7 +4680,7 @@ containing a value of this type.
         public static int line3=0x7f0a001d;
         public static int listMode=0x7f0a0024;
         public static int list_item=0x7f0a0070;
-        public static int masked=0x7f0a00cb;
+        public static int masked=0x7f0a00d4;
         public static int message=0x7f0a009c;
         public static int middle=0x7f0a0038;
         public static int mini=0x7f0a0059;
@@ -4770,7 +4779,7 @@ containing a value of this type.
         public static int up=0x7f0a0009;
         public static int useLogo=0x7f0a002d;
         public static int view_offset_helper=0x7f0a001b;
-        public static int visible=0x7f0a00ca;
+        public static int visible=0x7f0a00d3;
         public static int withText=0x7f0a0043;
         public static int wrap_content=0x7f0a0035;
     }

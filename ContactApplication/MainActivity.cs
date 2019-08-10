@@ -39,7 +39,6 @@ namespace ContactApplication
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
-
             /*
                         contactList.Add(new Person() { FirstName = "Sachin", LastName = "Kanishka", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
                         contactList.Add(new Person() { FirstName = "Sample", LastName = "Sample", MobileNumber = "", HomeNumber = "", Address = "", EmailAddress = "" });
@@ -66,9 +65,36 @@ namespace ContactApplication
 
             LoadData();
 
+            contactListView.ItemClick += contactListView_ItemClick;
+
         }
 
-        
+        void contactListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            //Toast.MakeText(this, contactList[e.Position].FirstName, ToastLength.Short).Show();
+
+            /*
+            for (int i = 0; i < contactListView.Count; i++)
+            {
+                if (e.Position == i)
+                {
+                    contactListView.GetChildAt(i).SetBackgroundColor(Android.Graphics.Color.DarkGray);
+                }
+                else
+                {
+                    contactListView.GetChildAt(i).SetBackgroundColor(Android.Graphics.Color.Transparent);
+                }
+            }
+
+    */
+
+            Intent intent = new Intent(this, typeof(ViewContactDetails));
+            intent.PutExtra("ListID", e.Id);
+            StartActivity(intent);
+
+
+
+        }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {

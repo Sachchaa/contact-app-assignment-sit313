@@ -13,6 +13,7 @@
     </activity>
     <activity android:label="SampleLayout" android:name="md5b1390f46afbf3ce7844592c449358cf5.SampleLayout" />
     <activity android:label="AddNewContact" android:name="md5b1390f46afbf3ce7844592c449358cf5.AddNewContact" />
+    <activity android:label="ViewContactDetails" android:name="md5b1390f46afbf3ce7844592c449358cf5.ViewContactDetails" />
     <service android:name="md5dcb6eccdc824e0677ffae8ccdde42930.KeepAliveService" />
     <receiver android:enabled="true" android:exported="false" android:label="Essentials Battery Broadcast Receiver" android:name="md5d630c3d3bfb5f5558520331566132d97.BatteryBroadcastReceiver" />
     <receiver android:enabled="true" android:exported="false" android:label="Essentials Energy Saver Broadcast Receiver" android:name="md5d630c3d3bfb5f5558520331566132d97.EnergySaverBroadcastReceiver" />

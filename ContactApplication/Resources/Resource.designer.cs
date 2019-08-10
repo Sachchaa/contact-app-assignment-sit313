@@ -3304,8 +3304,8 @@ namespace ContactApplication
 			// aapt resource value: 0x7f0a006b
 			public const int action_mode_close_button = 2131361899;
 			
-			// aapt resource value: 0x7f0a00cc
-			public const int action_settings = 2131361996;
+			// aapt resource value: 0x7f0a00d5
+			public const int action_settings = 2131362005;
 			
 			// aapt resource value: 0x7f0a00bd
 			public const int action_text = 2131361981;
@@ -3370,6 +3370,9 @@ namespace ContactApplication
 			// aapt resource value: 0x7f0a00a6
 			public const int cancelAddViewButton = 2131361958;
 			
+			// aapt resource value: 0x7f0a00d2
+			public const int cancelEditViewButton = 2131362002;
+			
 			// aapt resource value: 0x7f0a004c
 			public const int center = 2131361868;
 			
@@ -3421,6 +3424,9 @@ namespace ContactApplication
 			// aapt resource value: 0x7f0a006f
 			public const int default_activity_button = 2131361903;
 			
+			// aapt resource value: 0x7f0a00d1
+			public const int deleteContactButton = 2131362001;
+			
 			// aapt resource value: 0x7f0a00b3
 			public const int design_bottom_sheet = 2131361971;
 			
@@ -3438,6 +3444,27 @@ namespace ContactApplication
 			
 			// aapt resource value: 0x7f0a0027
 			public const int disableHome = 2131361831;
+			
+			// aapt resource value: 0x7f0a00ce
+			public const int editAddressText = 2131361998;
+			
+			// aapt resource value: 0x7f0a00d0
+			public const int editContactButton = 2131362000;
+			
+			// aapt resource value: 0x7f0a00cf
+			public const int editEmailText = 2131361999;
+			
+			// aapt resource value: 0x7f0a00ca
+			public const int editFirstNameText = 2131361994;
+			
+			// aapt resource value: 0x7f0a00cd
+			public const int editHomeNumberText = 2131361997;
+			
+			// aapt resource value: 0x7f0a00cb
+			public const int editLastNameText = 2131361995;
+			
+			// aapt resource value: 0x7f0a00cc
+			public const int editMobileNumberText = 2131361996;
 			
 			// aapt resource value: 0x7f0a008f
 			public const int edit_query = 2131361935;
@@ -3547,8 +3574,8 @@ namespace ContactApplication
 			// aapt resource value: 0x7f0a0070
 			public const int list_item = 2131361904;
 			
-			// aapt resource value: 0x7f0a00cb
-			public const int masked = 2131361995;
+			// aapt resource value: 0x7f0a00d4
+			public const int masked = 2131362004;
 			
 			// aapt resource value: 0x7f0a009c
 			public const int message = 2131361948;
@@ -3844,8 +3871,8 @@ namespace ContactApplication
 			// aapt resource value: 0x7f0a001b
 			public const int view_offset_helper = 2131361819;
 			
-			// aapt resource value: 0x7f0a00ca
-			public const int visible = 2131361994;
+			// aapt resource value: 0x7f0a00d3
+			public const int visible = 2131362003;
 			
 			// aapt resource value: 0x7f0a0043
 			public const int withText = 2131361859;

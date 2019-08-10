@@ -54,23 +54,50 @@ namespace ContactApplication
 
             btnSaveContact.Click += delegate
             {
-                Person person = new Person()
+                if (txtFirstName.Text != "" || txtMobile.Text != "")
                 {
-                    FirstName = txtFirstName.Text,
-                    LastName = txtLastName.Text,
-                    MobileNumber = txtMobile.Text,
-                    HomeNumber = txtHome.Text,
-                    Address = txtAddress.Text,
-                    EmailAddress = txtEmail.Text
-                };
+                    Person person = new Person()
+                    {
+                        FirstName = txtFirstName.Text,
+                        LastName = txtLastName.Text,
+                        MobileNumber = txtMobile.Text,
+                        HomeNumber = txtHome.Text,
+                        Address = txtAddress.Text,
+                        EmailAddress = txtEmail.Text
+                    };
 
-                db.InsertInToTablePerson(person);
+                    db.InsertInToTablePerson(person);
 
- 
+                    Intent intent = new Intent(this, typeof(MainActivity));
+                    StartActivity(intent);
+
+                }
+
+                else
+                {
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+                    alertDialog.SetTitle("Add Contact");
+                    alertDialog.SetMessage("Please add a valid contact name or number");
+                    alertDialog.SetNeutralButton("OK", delegate
+                    {
+                        alertDialog.Dispose();
+                    });
+                    alertDialog.Show();
+                }
+
+            };
+
+            btnCancel.Click += delegate
+            {
+                txtFirstName.Text = "";
+                txtLastName.Text = "";
+                txtMobile.Text = "";
+                txtHome.Text = "";
+                txtAddress.Text = "";
+                txtEmail.Text = "";
+
                 Intent intent = new Intent(this, typeof(MainActivity));
                 StartActivity(intent);
-
-
             };
 
         }

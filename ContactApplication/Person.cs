@@ -8,17 +8,21 @@ using Android.Views;
 using Android.Widget;
 using System.Collections.Generic;
 using Android.Content;
+using SQLite;
 
 namespace ContactApplication
 {
     public class Person
     {
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string MobileNumber { get; set; }
         public string HomeNumber { get; set; }
         public string Address { get; set; }
-        public string EmailAddress { get; set; } 
+        public string EmailAddress { get; set; }
 
+       
     }
 }

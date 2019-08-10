@@ -65,7 +65,7 @@ namespace ContactApplication
             {
                 using (var connection = new SQLiteConnection(System.IO.Path.Combine(folder, "Persons.db")))
                 {
-                    connection.Query<Person>("UPDATE Person set FirstName=?,LastName=?,MobileNumber=?,HomeNumber=?,Address=?,Email=? WHERE Id=?", person.FirstName, person.LastName, person.MobileNumber, person.HomeNumber, person.Address, person.EmailAddress);
+                    connection.Query<Person>("UPDATE Person set FirstName=?,LastName=?,MobileNumber=?,HomeNumber=?,Address=?,EmailAddress=? WHERE FirstName=? AND MobileNumber=?", person.FirstName, person.LastName, person.MobileNumber, person.HomeNumber, person.Address, person.EmailAddress);
                     return true;
                 }
             }
@@ -91,13 +91,13 @@ namespace ContactApplication
                 return false;
             }
         }
-        public bool selectQueryPerson(int Id)
+        public bool selectQueryPerson(Person person)
         {
             try
             {
                 using (var connection = new SQLiteConnection(System.IO.Path.Combine(folder, "Persons.db")))
                 {
-                    connection.Query<Person>("SELECT * FROM Person Where Id=?", Id);
+                    connection.Query<Person>("SELECT * FROM Person WHERE FirstName=? AND MobileNumber=?", person.FirstName, person.MobileNumber);
                     return true;
                 }
             }
@@ -107,8 +107,6 @@ namespace ContactApplication
                 return false;
             }
         }
-        public Database()
-        {
-        }
+        
     }
 }
